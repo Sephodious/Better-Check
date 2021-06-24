@@ -30,7 +30,7 @@ inspired by Battlemod (Byrth) from Windower and Checker (atom0s & Lolwutt) from 
 
 _addon.name = 'Better Check'
 _addon.author = 'Sephodious' -- Rubenator basically wrote this with me, thanks again
-_addon.version = '1.0'
+_addon.version = '1.1'
 
 -- sets local variables and requires
 local packets = require ('packets')
@@ -60,7 +60,7 @@ windower.register_event('incoming chunk',function (id,original,modified,injected
             local lvl = mobinfo['Param 1']
             
             -- gets mob level
-            if lvl > 2147483647 then
+            if lvl > 0x7FFFFFFF then
                 lvl = -1
             end
             
